@@ -13,9 +13,7 @@ npm install babel-preset-es2015
 <h5>STEP 3: Create .babelrc File </h5>
 ```
 {
-    "presets": [
-        "es2015"
-    ]
+    "presets": ["es2015"]
 }
 ```
 <h5>STEP 4: Create Project Structure </h5>
