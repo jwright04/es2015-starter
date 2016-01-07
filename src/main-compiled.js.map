@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA,YAAY,CAAC;;AACb,IAAM,QAAQ,GAAG,WAAW,CAAC;AAC7B,IAAI,QAAQ,GAAG,aAAa,CAAC;AAC7B,OAAO,CAAC,GAAG,CAAC,QAAQ,GAAG,GAAG,GAAG,QAAQ,CAAC,CAAC","file":"main-compiled.js","sourcesContent":["\"use strict\";\nconst USERNAME = \"jwright04\";\nlet greeting = \"Username is\";\nconsole.log(greeting + \":\" + USERNAME);"]}
