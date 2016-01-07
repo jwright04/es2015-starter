@@ -1,6 +1,6 @@
 # ES2015 & Babel Starter Project
 
-Quick ES2015 starer without all of the bells and whistles.
+Quick ES2015 starer without all of the bells and whistles. 
 
 <h5>STEP 1: Setup Babel CommandLine Utility [https://babeljs.io/docs/setup/]</h5>
 ```
@@ -13,7 +13,9 @@ npm install babel-preset-es2015
 <h5>STEP 3: Create .babelrc File </h5>
 ```
 {
-    "presets": ["es2015"]
+    "presets": [
+        "es2015"
+    ]
 }
 ```
 <h5>STEP 4: Create Project Structure </h5>
@@ -44,7 +46,7 @@ npm install babel-preset-es2015
 ```
 
 <h5>STEP 6: main.js</h5>
-```
+``` 
 "use strict";
 const USERNAME = "jwright04";
 let greeting = "Username is";
@@ -65,25 +67,33 @@ go through the steps
   "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist --source-maps",
-    "watch": "babel src --watch --out-dir dist --source-maps"
+    "build": "babel src --out-dir dist --source-maps && npm run uglify",
+    "watch": "babel src --watch --out-dir dist --source-maps",
+    "uglify": "uglifyjs --compress --mangle --output dist/main.js -- dist/main.js"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "uglify-js": "^2.6.1"
+  }
 }
 
 ```
 
+```
+npm install
+```
+
 
 <h5>STEP 9: Run the Application</h5>
-Update the dist/main.js file whenever a change is made to src/main.js
+Development build to update the dist/main.js file whenever a change is made to src/main.js with no minification
 
 ```
 npm run watch
 ```
 or
 
-Update the dist/main.js manually
+Production build to update the dist/main.js with UglifyJS2 minification 
 
 ```
 npm run build

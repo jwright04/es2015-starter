@@ -5,9 +5,13 @@
   "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist --source-maps",
-    "watch": "babel src --watch --out-dir dist --source-maps"
+    "build": "babel src --out-dir dist --source-maps && npm run uglify",
+    "watch": "babel src --watch --out-dir dist --source-maps",
+    "uglify": "uglifyjs --compress --mangle --output dist/main.js -- dist/main.js"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "uglify-js": "^2.6.1"
+  }
 }
